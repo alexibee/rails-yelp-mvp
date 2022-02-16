@@ -12,8 +12,7 @@
   rest = Restaurant.new(
     name: "restaurant #{n}",
     address: "#{n} totally valid address",
-    category: CATEGORIES.sample,
-    rating: rand(0..5)
+    category: Restaurant::CATEGORIES.sample,
   )
   rest.save!
 end
