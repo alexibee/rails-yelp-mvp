@@ -5,6 +5,6 @@ class Restaurant < ApplicationRecord
   validates :name, presence: true
   validates :address, presence: true
   validates :category, presence: true, inclusion: { in: CATEGORIES }
-  validates :phone_number, format: { with: /\A(\+|\d)\d{11,14}/ }
+  # validates :phone_number, format: { with: /\A(\+|\d)\d{11,14}/ }
   has_many :reviews, dependent: :destroy
 end
