@@ -2,9 +2,9 @@
 
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :restaurants, only: [:index, :show, :new, :create] do
+  resources :restaurants, only: %i[index show new create] do
     member do
-      resources :reviews, only: [:new, :create]
+      resources :reviews, only: %i[new create]
     end
   end
 end
